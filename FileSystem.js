@@ -23,7 +23,7 @@ var FileSystem = {
         if (self.$fs) {
             var fs = self.$fs;
             return new Promise(function (resolve, reject) {
-                fs.root.getFile(filePath, { create: true, exclusize: true }, resolve, reject);
+                fs.root.getFile(filePath, { create: true, exclusive: true }, resolve, reject);
             })
         }
         else throw new Error("$fs should not be null");
